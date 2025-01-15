@@ -226,6 +226,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lifes
       objectReference: {fileID: 0}
+    - target: {fileID: 8977497199662045397, guid: 2f67e3b84996e2841b835ea6e366e1ec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ad092a6fabb01cd4e8378fd778b5d730, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -276,6 +280,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1698732508260654414}
     m_Modifications:
+    - target: {fileID: 1249681642176919321, guid: 2f67e3b84996e2841b835ea6e366e1ec, type: 3}
+      propertyPath: m_margin.z
+      value: -55.476982
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249681642176919321, guid: 2f67e3b84996e2841b835ea6e366e1ec, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3886010423840782082, guid: 2f67e3b84996e2841b835ea6e366e1ec, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -360,10 +372,22 @@ PrefabInstance:
       propertyPath: m_TargetGraphic
       value: 
       objectReference: {fileID: 4643353022354367911}
+    - target: {fileID: 4893996673283321235, guid: 2f67e3b84996e2841b835ea6e366e1ec, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893996673283321235, guid: 2f67e3b84996e2841b835ea6e366e1ec, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7872474129548662465, guid: 2f67e3b84996e2841b835ea6e366e1ec, type: 3}
       propertyPath: m_Name
       value: Coins
       objectReference: {fileID: 0}
+    - target: {fileID: 8977497199662045397, guid: 2f67e3b84996e2841b835ea6e366e1ec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5ffbf9052f2ef9d4689bd9cb8db50cb2, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -500,8 +524,12 @@ PrefabInstance:
       objectReference: {fileID: 2664207794805622508}
     - target: {fileID: 7872474129548662465, guid: 2f67e3b84996e2841b835ea6e366e1ec, type: 3}
       propertyPath: m_Name
-      value: Strike
+      value: Streaks
       objectReference: {fileID: 0}
+    - target: {fileID: 8977497199662045397, guid: 2f67e3b84996e2841b835ea6e366e1ec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f6379caf1911174459fff1330437c92f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -538,7 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf990a7f3294112a7bd86e089d16b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  labelId: strikes
+  labelId: streaks
 --- !u!224 &8216583480160267054 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3886010423840782082, guid: 2f67e3b84996e2841b835ea6e366e1ec, type: 3}
