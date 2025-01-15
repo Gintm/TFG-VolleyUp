@@ -4,10 +4,10 @@ using UnityEngine;
 [System.Serializable]
 public class Questions
 {
-    List<Question> questions;
-    
+    public List<Question> questions;
+
     public int HowMany => questions.Count;
-    
+
     /// <remarks> No CQS </remarks>
     public Question PickRandom()
     {
