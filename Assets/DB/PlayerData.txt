@@ -1,5 +1,5 @@
 {
-    "lifes": 0,
+    "lifes": 10,
     "coins": 1000,
     "strikes": 0,
     "currentSession": 0,
