@@ -8,7 +8,7 @@ public class PlayerData
 {
     public int lifes;
     public int coins;
-    public int strikes;
+    public int streaks;
     public int currentSession;
     public int lvlCurrentSession;
 }

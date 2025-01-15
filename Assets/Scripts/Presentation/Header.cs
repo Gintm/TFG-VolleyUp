@@ -10,7 +10,7 @@ namespace Presentation
         {
             LabelOf("lifes").Refresh(playerData.lifes);
             LabelOf("coins").Refresh(playerData.coins);
-            LabelOf("strikes").Refresh(playerData.strikes);
+            LabelOf("streaks").Refresh(playerData.streaks);
         }
 
         [NotNull] CurrencyLabel LabelOf(string currency)

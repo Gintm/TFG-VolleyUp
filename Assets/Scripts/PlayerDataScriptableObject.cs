@@ -6,7 +6,7 @@ public class PlayerDataScriptableObject : ScriptableObject, PlayerRepo
 {
     private int lifes;
     private int coins;
-    private int strikes;
+    private int streaks;
     private int currentSession;
     private int lvlCurrentSession;
 
@@ -15,13 +15,13 @@ public class PlayerDataScriptableObject : ScriptableObject, PlayerRepo
     public void Lost()
     {
         lifes -= 1;
-        strikes = 0;
+        streaks = 0;
     }
 
     public void Win(int score)
     {
         coins += score * 100;
-        strikes += 1;
+        streaks += 1;
     }
 
     public int GetCurrentSession() => currentSession;
@@ -30,7 +30,7 @@ public class PlayerDataScriptableObject : ScriptableObject, PlayerRepo
     {
         lifes = infoSource.lifes;
         coins = infoSource.coins;
-        strikes = infoSource.strikes;
+        streaks = infoSource.streaks;
         currentSession = infoSource.currentSession;
         lvlCurrentSession = infoSource.lvlCurrentSession;
     }

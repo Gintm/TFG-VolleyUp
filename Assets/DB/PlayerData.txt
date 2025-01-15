@@ -1,7 +1,7 @@
 {
     "lifes": 10,
     "coins": 1000,
-    "strikes": 0,
+    "streak": 0,
     "currentSession": 0,
     "lvlCurrentSession": 0
 }
