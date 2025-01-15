@@ -10,14 +10,14 @@ namespace Tests
     public class CurrenciesTests
     {
         [UnityTest]
-        public IEnumerator StrikesAreOne()
+        public IEnumerator StreaksAreOne()
         {
             SceneManager.LoadScene("MainMenu");
             yield return new WaitForSeconds(1);
             
-            var strikes = GameObject.Find("Strike").GetComponentInChildren<TMP_Text>().text;
+            var streaks = GameObject.Find("Streak").GetComponentInChildren<TMP_Text>().text;
             
-            Assert.AreEqual("1", strikes);
+            Assert.AreEqual("1", streaks );
         }
 
         [UnityTest]
