@@ -257,11 +257,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 115}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &429686516 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7082614269314497657, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
-  m_PrefabInstance: {fileID: 1806933193725768849}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &429686517 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1634130415850922188, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
@@ -370,8 +365,9 @@ GameObject:
   - component: {fileID: 528627798}
   - component: {fileID: 528627800}
   - component: {fileID: 528627799}
+  - component: {fileID: 528627801}
   m_Layer: 5
-  m_Name: QuizzUI
+  m_Name: QuizUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,6 +432,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528627797}
   m_CullTransparentMesh: 1
+--- !u!114 &528627801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528627797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89881603d5554aaeb0084ad81d1f39de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Buttons:
+  - {fileID: 956097811}
+  - {fileID: 1865834159}
+  - {fileID: 977883181}
+  - {fileID: 650192378}
+  QuestionText: {fileID: 304219478}
 --- !u!1 &650192378
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +712,8 @@ GameObject:
   m_Component:
   - component: {fileID: 811978530}
   - component: {fileID: 811978531}
+  - component: {fileID: 811978532}
+  - component: {fileID: 811978533}
   m_Layer: 0
   m_Name: QuizManager
   m_TagString: Untagged
@@ -732,19 +748,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eac676eab6d7734e9408c9cd05e255e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Buttons:
-  - {fileID: 956097811}
-  - {fileID: 1865834159}
-  - {fileID: 977883181}
-  - {fileID: 650192378}
+--- !u!114 &811978532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811978528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63628fe2280d2624dab741befcaec38e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: fb31617202a7ddf4bb7d3e99778276eb, type: 2}
-  QuizPanel: {fileID: 528627797}
-  GameOverPanel: {fileID: 429686516}
-  JSONFile: {fileID: 4900000, guid: 4f97a96dbee501546849f5743d6f45ef, type: 3}
-  QuestionText: {fileID: 304219478}
-  ScoreText: {fileID: 974407203}
-  TimeText: {fileID: 1297492752}
-  playerDataController: {fileID: 1205403184}
+  JSONFile: {fileID: 4900000, guid: b529aa98df9f1984a947d4e99f940754, type: 3}
+--- !u!114 &811978533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811978528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b052d0c5ae44530af9706429e13adce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeText: {fileID: 1297492752}
+  scoreText: {fileID: 974407203}
 --- !u!1 &952361677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,9 +1445,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: fb31617202a7ddf4bb7d3e99778276eb, type: 2}
-  lifesText: {fileID: 0}
-  coinsText: {fileID: 0}
-  strikesText: {fileID: 0}
 --- !u!4 &1205403185
 Transform:
   m_ObjectHideFlags: 0
@@ -2101,11 +2129,11 @@ PrefabInstance:
     - target: {fileID: 2434865092238969306, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 811978531}
+      objectReference: {fileID: 811978533}
     - target: {fileID: 2434865092238969306, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 811978531}
+      objectReference: {fileID: 0}
     - target: {fileID: 2434865092238969306, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -2120,7 +2148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2434865092238969306, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: QuestionAndAnswersManager, Assembly-CSharp
+      value: GameOver, Scripts
       objectReference: {fileID: 0}
     - target: {fileID: 2434865092238969306, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -2131,20 +2159,32 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2632940010984043294, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2632940010984043294, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 811978531}
+      objectReference: {fileID: 811978533}
     - target: {fileID: 2632940010984043294, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToMainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 2632940010984043294, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: QuestionAndAnswersManager, Assembly-CSharp
+      value: GameOver, Scripts
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563622997891640067, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7082614269314497657, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
       propertyPath: m_Name
       value: GameOverPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7082614269314497657, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
