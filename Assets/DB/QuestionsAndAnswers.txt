@@ -1,0 +1,27 @@
+{
+    "questions":
+    [
+        {
+            "title": "Quina lletra A és correcta?",
+            "answers":
+            [
+                "a",
+                "aa",
+                "aaa",
+                "aaaa"
+            ],
+            "correctAnswer": 1
+        },
+        {
+            "title": "Quina lletra E és correcta?",
+            "answers":
+            [
+                "ee",
+                "e",
+                "eeee",
+                "eee"
+            ],
+            "correctAnswer": 2
+        }
+    ]
+}

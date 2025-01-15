@@ -1,0 +1,33 @@
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+*.csproj
+*.sln
+*.user
+*.userprefs
+*.pidb
+*.suo
+*.tmp
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.sln.ide
+*.sln.pdb
+*.sln.userprefs
+*.unityproj
+*.wsp
+*.wsl
+*.bak
+*.swp
+*.tmp
+
+# Visual Studio Code
+.vscode/
+.vs/
+
