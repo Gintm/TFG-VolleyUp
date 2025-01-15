@@ -6,33 +6,39 @@ using UnityEngine;
 
 public interface RoundRepo 
 {
+    public void LoadData( TextAsset file );
     public abstract Round OneRound();
 }
 
-public class ProductionRoundRepo : MonoBehaviour, RoundRepo
+public class OneQuestionOneAnswerRepo : MonoBehaviour, RoundRepo
 {
-    [SerializeField] TextAsset JSONFile;
-    
+    TextAsset JSONFile;
+
+    public void LoadData(TextAsset file)
+    {
+        JSONFile = file;
+    }
+
     public Round OneRound()
     {
-        return LoadFromJson.OneRound(JSONFile.text);
+        return LoadFromJson.OneRound( JSONFile.text );
     }
 }
 
-public class QaRoundRepo : MonoBehaviour, RoundRepo
-{
-    [SerializeField] string JSONtext;
+//public class QaRoundRepo : MonoBehaviour, RoundRepo
+//{
+//    [SerializeField] string JSONtext;
     
-    public Round OneRound()
-    {
-        return LoadFromJson.OneRound(JSONtext);
-    }
-}
+//    public Round OneRound()
+//    {
+//        return LoadFromJson.OneRound(JSONtext);
+//    }
+//}
 
-public class TheNewIncredibleRoundRepo : RoundRepo
-{
-    public Round OneRound()
-    {
-        throw new NotImplementedException();
-    }
-}
+//public class TheNewIncredibleRoundRepo : RoundRepo
+//{
+//    public Round OneRound()
+//    {
+//        throw new NotImplementedException();
+//    }
+//}

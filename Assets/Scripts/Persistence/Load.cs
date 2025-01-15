@@ -16,8 +16,8 @@ namespace Persistence
 
         public static Round OneRound(string textToLoad)
         {
-            var awdfad = JsonUtility.FromJson<Questions>( textToLoad );
-            return new Round(awdfad);
+            var data = JsonUtility.FromJson<Questions>( textToLoad );
+            return new Round( data );
         }
     }
 }
