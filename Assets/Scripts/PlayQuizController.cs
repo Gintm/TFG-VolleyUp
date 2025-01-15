@@ -1,17 +1,14 @@
 using System;
 using DefaultNamespace;
-using Persistence;
-using TMPro;
 using UnityEngine;
 
 public class PlayQuizController : MonoBehaviour
 {
-    [SerializeField] GameOver gameOverController;
-    
     Round round;
     RoundRepo roundRepo;
     PlayerRepo playerRepo;
 
+    GameOver gameOver;
     ToggleGameObjects quizOrGameOverPanels;
 
     public void Answered( bool isCorrect )
@@ -29,7 +26,7 @@ public class PlayQuizController : MonoBehaviour
         quizOrGameOverPanels.Toggle();
         playerRepo.SaveOneRound(round);
         
-        gameOverController.UpdateView(round.SealResult());
+        gameOver.UpdateView(round.SealResult());
     }
 
     public void Inject(RoundRepo repo, PlayerRepo playerRepo)
@@ -47,6 +44,8 @@ public class PlayQuizController : MonoBehaviour
     private void setUpData()
     {
         round = roundRepo.OneRound();
+        quizOrGameOverPanels = new ToggleGameObjects( GameObject.Find( "QuizUI" ), GameObject.Find( "GameOverPanel" ) );
+        gameOver = GetComponent<GameOver>();
     }
 
     private void generateQuestion()
@@ -65,6 +64,6 @@ public class PlayQuizController : MonoBehaviour
     void NextQuestion()
     {
         var question = round.PickNextQuestion();
-        GetComponent<QuestionView>().SetupData(question);
+        FindObjectOfType< QuestionView>().SetupData(question);
     }
 }
