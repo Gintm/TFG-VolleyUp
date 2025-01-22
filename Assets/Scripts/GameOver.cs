@@ -11,21 +11,22 @@ public class GameOver : MonoBehaviour
 
     GameObject retryButton;
     
-    //[SerializeField] PlayerDataController playerDataController;
+    [SerializeField] PlayerDataController playerDataController;
 
     public void UpdateView(ResultOfTheRound result)
     {
         var roundDuration = (float)result.Duration.TotalSeconds;
-        scoreText.text = result.HitsProportion.ToString();
+        scoreText.text = result.HitsProportion.ToPercentage();
         timeText.text = TimeFormat.AsStopwatch(roundDuration);
 
         if(result.HasLost)
             Lose();
+
+        playerDataController.Save();
     }
 
     private void ChangeScene( int index )
     {
-        //playerDataController.SendMessage( "SaveToJson" );
         SceneManager.LoadScene( index );
     }
 

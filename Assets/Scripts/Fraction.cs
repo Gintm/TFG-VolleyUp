@@ -19,6 +19,11 @@ namespace DefaultNamespace
         {
             return Numerator + "/" + Denominator;
         }
+
+        public string ToPercentage()
+        {
+            return Numerator / Denominator * 100 + "%";
+        }
         
         public static Fraction operator ++(Fraction fraction)
         {

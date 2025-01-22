@@ -37,9 +37,9 @@ namespace Tests
             SceneManager.LoadScene("MainMenu");
             yield return new WaitForSeconds(1);
             
-            var balls = GameObject.Find("Lifes").GetComponentInChildren<TMP_Text>().text;
+            var lifes = GameObject.Find("Lifes").GetComponentInChildren<TMP_Text>().text;
             
-            Assert.AreEqual("0", balls);
+            Assert.AreEqual("0", lifes);
         }
     }
 }
