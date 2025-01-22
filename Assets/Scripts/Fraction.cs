@@ -22,7 +22,7 @@ namespace DefaultNamespace
 
         public string ToPercentage()
         {
-            return Numerator / Denominator * 100 + "%";
+            return (float)Numerator / Denominator * 100 + "%";
         }
         
         public static Fraction operator ++(Fraction fraction)
