@@ -16,5 +16,10 @@ public class PlayerDataController : MonoBehaviour
         GetComponent<Header>()?.RefreshLabels(playerData);
     }
 
+    public void Save()
+    {
+        SaveToJson.PlayerData( gameData );
+    }
+
     public bool HasNoLifes() => gameData.GetLifes() == 0;
 }

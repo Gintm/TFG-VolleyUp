@@ -1,14 +1,15 @@
 using DefaultNamespace;
+using Persistence;
 using UnityEngine;
 
 [CreateAssetMenu]
 public class PlayerDataScriptableObject : ScriptableObject, PlayerRepo
 {
-    private int lifes;
-    private int coins;
-    private int streaks;
-    private int currentSession;
-    private int lvlCurrentSession;
+    [SerializeField] private int lifes;
+    [SerializeField] private int coins;
+    [SerializeField] private int streaks;
+    [SerializeField] private int currentSession;
+    [SerializeField] private int lvlCurrentSession;
 
     public int GetLifes() => lifes;
 

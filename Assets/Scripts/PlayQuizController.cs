@@ -64,6 +64,6 @@ public class PlayQuizController : MonoBehaviour
     void NextQuestion()
     {
         var question = round.PickNextQuestion();
-        FindObjectOfType< QuestionView>().SetupData(question);
+        FindObjectOfType<QuestionView>().SetupData(question);
     }
 }
