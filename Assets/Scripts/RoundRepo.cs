@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Net.Http;
 using DefaultNamespace;
 using Persistence;
@@ -7,6 +8,7 @@ using UnityEngine;
 public interface RoundRepo 
 {
     public void LoadData( TextAsset file );
+    public void LoadData( string path );
     public abstract Round OneRound();
 }
 
@@ -19,21 +21,31 @@ public class OneQuestionOneAnswerRepo : MonoBehaviour, RoundRepo
         JSONFile = file;
     }
 
+    public void LoadData( string path ) { }
+
     public Round OneRound()
     {
         return LoadFromJson.OneRound( JSONFile.text );
     }
 }
 
-//public class QaRoundRepo : MonoBehaviour, RoundRepo
-//{
-//    [SerializeField] string JSONtext;
-    
-//    public Round OneRound()
-//    {
-//        return LoadFromJson.OneRound(JSONtext);
-//    }
-//}
+public class QaRoundRepo : MonoBehaviour, RoundRepo
+{
+    string JSONpath;
+
+    public void LoadData( TextAsset file ) { }
+
+    public void LoadData( string path )
+    {
+        JSONpath = path;
+    }
+
+    public Round OneRound()
+    {
+        var jsonData = File.ReadAllText( JSONpath );
+        return LoadFromJson.OneRound( jsonData );
+    }
+}
 
 //public class TheNewIncredibleRoundRepo : RoundRepo
 //{

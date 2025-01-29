@@ -19,9 +19,9 @@ public class PlayerDataScriptableObject : ScriptableObject, PlayerRepo
         streaks = 0;
     }
 
-    public void Win(int score)
+    public void Win(Round round)
     {
-        coins += score * 100;
+        coins += round.Coins;
         streaks += 1;
     }
 
@@ -44,7 +44,7 @@ public class PlayerDataScriptableObject : ScriptableObject, PlayerRepo
         }
         else
         {
-            Win(round.Hits);
+            Win(round);
         }
     }
 }

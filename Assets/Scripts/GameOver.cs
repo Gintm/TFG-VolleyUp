@@ -8,6 +8,7 @@ public class GameOver : MonoBehaviour
 {
     [SerializeField] TMP_Text timeText;
     [SerializeField] TMP_Text scoreText;
+    [SerializeField] TMP_Text coinsText;
 
     GameObject retryButton;
     
@@ -18,6 +19,8 @@ public class GameOver : MonoBehaviour
         var roundDuration = (float)result.Duration.TotalSeconds;
         scoreText.text = result.HitsProportion.ToPercentage();
         timeText.text = TimeFormat.AsStopwatch(roundDuration);
+        coinsText.text = result.Coins.ToString();
+
 
         if(result.HasLost)
             Lose();

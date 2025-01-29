@@ -23,9 +23,14 @@ public class PlayQuizController : MonoBehaviour
     
     void ToGameOver()
     {
+        if (!round.HasLost)
+        {
+            round.EarnCoins();
+        }
+
         quizOrGameOverPanels.Toggle();
         playerRepo.SaveOneRound(round);
-        
+
         gameOver.UpdateView(round.SealResult());
     }
 
