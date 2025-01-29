@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: fb31617202a7ddf4bb7d3e99778276eb, type: 2}
-  JSONFile: {fileID: 4900000, guid: 4f97a96dbee501546849f5743d6f45ef, type: 3}
+  JSONFile: {fileID: 4900000, guid: 644c8ded88b44ea4b9b50e02d1cf0364, type: 3}
 --- !u!114 &811978533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,10 +408,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeText: {fileID: 1297492752}
   scoreText: {fileID: 974407203}
+  coinsText: {fileID: 1100106379}
   playerDataController: {fileID: 1205403184}
 --- !u!114 &974407203 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2598763893355053635, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
+  m_PrefabInstance: {fileID: 1806933193725768849}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1100106379 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5988192190366397255, guid: 1bad9c6510bb4be45b30c06eb105267e, type: 3}
   m_PrefabInstance: {fileID: 1806933193725768849}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
