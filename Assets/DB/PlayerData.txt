@@ -1,7 +1,15 @@
 {
-    "lifes": 4,
+    "lifes": 3,
     "coins": 1000,
     "streaks": 0,
     "currentSession": 0,
-    "lvlCurrentSession": 0
+    "lvlCurrentSession": 0,
+    "firstname": "Gemma",
+    "surname": "Torello",
+    "degree": "Entrenador Pista Nivell I",
+    "teams": {
+        "name": "Academia Voleibol Barcelona",
+        "category": "Senior",
+        "league": "4a catalana"
+    }
 }

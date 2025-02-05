@@ -11,4 +11,16 @@ public class PlayerData
     public int streaks;
     public int currentSession;
     public int lvlCurrentSession;
+    public string firstname;
+    public string surname;
+    public string degree;
+    public Team teams;
+}
+
+[Serializable]
+public class Team
+{
+    public string name;
+    public string category;
+    public string league;
 }

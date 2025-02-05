@@ -10,6 +10,10 @@ public class PlayerDataScriptableObject : ScriptableObject, PlayerRepo
     [SerializeField] private int streaks;
     [SerializeField] private int currentSession;
     [SerializeField] private int lvlCurrentSession;
+    [SerializeField] public string firstname;
+    [SerializeField] public string surname;
+    [SerializeField] public string degree;
+    [SerializeField] public Team teams;
 
     public int GetLifes() => lifes;
 
@@ -34,6 +38,11 @@ public class PlayerDataScriptableObject : ScriptableObject, PlayerRepo
         streaks = infoSource.streaks;
         currentSession = infoSource.currentSession;
         lvlCurrentSession = infoSource.lvlCurrentSession;
+        firstname = infoSource.firstname;
+        surname = infoSource.surname;
+        degree = infoSource.degree;
+        teams = infoSource.teams;
+
     }
 
     public void SaveOneRound(Round round)
