@@ -483,6 +483,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: CourtHeader
       objectReference: {fileID: 0}
+    - target: {fileID: 7679029120620289954, guid: 036705f4fcbb7af45bfa03a603ad4cc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679029120620289954, guid: 036705f4fcbb7af45bfa03a603ad4cc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679029120620289954, guid: 036705f4fcbb7af45bfa03a603ad4cc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1984872735}
+    - target: {fileID: 7679029120620289954, guid: 036705f4fcbb7af45bfa03a603ad4cc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679029120620289954, guid: 036705f4fcbb7af45bfa03a603ad4cc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Clean
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679029120620289954, guid: 036705f4fcbb7af45bfa03a603ad4cc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DrawOnPanel, Scripts
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679029120620289954, guid: 036705f4fcbb7af45bfa03a603ad4cc4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -653,7 +681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawArea: {fileID: 1984872732}
   lineThickness: 5
-  colorManager: {fileID: 0}
+  colorManager: {fileID: 2100861476}
 --- !u!224 &1998690065 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1698732508260654414, guid: 036705f4fcbb7af45bfa03a603ad4cc4, type: 3}
@@ -727,6 +755,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2100861476 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8011115762783742580, guid: 036705f4fcbb7af45bfa03a603ad4cc4, type: 3}
+  m_PrefabInstance: {fileID: 1295333639}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a559be066cbaf4cb751319d51efd65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

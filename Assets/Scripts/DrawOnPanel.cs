@@ -103,4 +103,19 @@ public class DrawOnPanel : MonoBehaviour, IPointerDownHandler, IDragHandler
             DrawAtPoint( localPoint );
         }
     }
+
+    public void Clean()
+    {
+        Color transparentColor = new Color( 0, 0, 0, 0 );
+        Color[] pixels = new Color[texture.width * texture.height];
+
+        for (int i = 0; i<pixels.Length; i++)
+        {
+            pixels[i] = transparentColor;
+        }
+
+        texture.SetPixels( pixels );
+        texture.Apply();
+
+    }
 }
