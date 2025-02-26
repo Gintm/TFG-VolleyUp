@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2048
     height: 1068.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 783.2001
     height: 416.40002
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 52
+  controlID: 101
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -371,7 +371,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/TextMesh Pro/Fonts
+    - Assets/Prefabs/Menu
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -379,16 +379,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/TextMesh Pro/Fonts
+  - Assets/Prefabs/Menu
   m_LastFoldersGridSize: 96
   m_LastProjectPath: "D:\\Udg\\TFG\\V\xF2lei"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 44.599976}
-    m_SelectedIDs: 20860000
-    m_LastClickedID: 34336
-    m_ExpandedIDs: 00000000586d0000846d00002286000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 4c6d0000
+    m_LastClickedID: 27980
+    m_ExpandedIDs: 00000000206d0000226d0000406d0000466d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -416,7 +416,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000586d00005a6d0000
+    m_ExpandedIDs: 00000000206d0000226d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -556,9 +556,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 9e87ffffc8acffffb0c9ffff94cbffffd2cbffff4cccffffc8ccffffdafaffff02fbffff04fbffff126c0000
+      m_SelectedIDs: a6930000
+      m_LastClickedID: 37798
+      m_ExpandedIDs: b032fffffc4cffff9661ffff3a65ffff7482ffff40eaffffe8ecffff04fbffff4a6c0000f07000008e720000c87200008487000098870000da870000e6870000d4920000f292000044930000589300007a9300009a930000a6930000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -964,9 +964,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 346.62433, y: 360.06406, z: -2.1018722}
+    m_Target: {x: 328.84628, y: 222.98883, z: -0.60775256}
     speed: 2
-    m_Value: {x: 346.62433, y: 360.06406, z: -2.1018722}
+    m_Value: {x: 328.84628, y: 222.98883, z: -0.60775256}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1016,9 +1016,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 253.32098
+    m_Target: 163.27475
     speed: 2
-    m_Value: 253.32098
+    m_Value: 163.27475
   m_Ortho:
     m_Target: 1
     speed: 2

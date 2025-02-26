@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using Presentation;
+using static Codice.CM.Common.CmCallContext;
 
 public class CarouselManager : MonoBehaviour
 {
@@ -43,7 +44,7 @@ public class CarouselManager : MonoBehaviour
         if( useTimer )
         {
             timer = autoMoveTime;
-            InvokeRepeating( "AutoMoveContent", 1f, 1f ); // Invoke every second to update the timer
+            InvokeRepeating( "AutoMoveContent", 1f, 1f );
         }
     }
 
@@ -56,19 +57,15 @@ public class CarouselManager : MonoBehaviour
     void CreateDot(bool isCurrent)
     {
         var dot = Instantiate( dotPrefab, dotsContainer.transform );
-        dot.GetComponent<NavigationDot>().Init(isCurrent);
+        dot.GetComponentInChildren<NavigationDot>().UpdateColor( isCurrent);
     }
 
     void UpdateDots()
     {
-        // Update the appearance of dots based on the current index
         for( int i = 0; i < dotsContainer.transform.childCount; i++ )
         {
-            Image dotImage = dotsContainer.transform.GetChild( i ).GetComponent<Image>();
-            dotImage.color = ( i == currentIndex ) ? Color.white : Color.gray;
-
-            float targetFillAmount = timer / autoMoveTime;
-            StartCoroutine( SmoothFill( dotImage, targetFillAmount, 0.5f ) );
+            var dot = dotsContainer.transform.GetChild( i );
+            dot.GetComponentInChildren<NavigationDot>().UpdateColor( i == currentIndex );
         }
     }
 
@@ -84,12 +81,11 @@ public class CarouselManager : MonoBehaviour
             yield return null;
         }
 
-        image.fillAmount = targetFillAmount; // Ensure it reaches the exact target
+        image.fillAmount = targetFillAmount;
     }
 
     void Update()
     {
-        // Detect swipe input only within the content area
         DetectSwipe();
         //TODO: WHEN NOTIFIED
         int gameDataCurrentSession = gameData.GetCurrentSession();
@@ -113,12 +109,10 @@ public class CarouselManager : MonoBehaviour
             Vector2 touchEndPos = Input.mousePosition;
             float swipeDistance = touchEndPos.x - touchStartPos.x;
 
-            // Check if the swipe is within the content area bounds
             if( Mathf.Abs( swipeDistance ) > swipeThreshold && IsTouchInContentArea( touchStartPos ) )
             {
                 if( isLimitedSwipe && ( ( currentIndex == 0 && swipeDistance > 0 ) || ( currentIndex == contentPanels.Count - 1 && swipeDistance < 0 ) ) )
                 {
-                    // Limited swipe is enabled, and at the edge of content
                     return;
                 }
 
@@ -141,7 +135,7 @@ public class CarouselManager : MonoBehaviour
 
     void AutoMoveContent()
     {
-        timer -= 1f; // Decrease timer every second
+        timer -= 1f;
 
         if( timer <= 0 )
         {
@@ -149,7 +143,7 @@ public class CarouselManager : MonoBehaviour
             NextContent();
         }
 
-        UpdateDots(); // Update dots on every timer tick
+        UpdateDots();
     }
 
     void NextContent()
@@ -173,19 +167,16 @@ public class CarouselManager : MonoBehaviour
             bool isActive = i == currentIndex;
             contentPanels[i].SetActive( isActive );
 
-            // Update dot visibility and color based on the current active content
             Image dotImage = dotsContainer.transform.GetChild( i ).GetComponent<Image>();
             dotImage.color = isActive ? Color.white : Color.gray;
 
             if( isActive )
             {
-                // Reset timer and fill amount when the content is swiped
                 timer = autoMoveTime;
                 dotImage.fillAmount = 1f;
             }
             else
             {
-                // Set the fill amount to 0 for non-active content
                 dotImage.fillAmount = 0f;
             }
         }

@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.SceneManagement;
+using Persistence;
 
 public class GameOver : MonoBehaviour
 {
@@ -28,20 +29,15 @@ public class GameOver : MonoBehaviour
         playerDataController.Save();
     }
 
-    private void ChangeScene( int index )
-    {
-        SceneManager.LoadScene( index );
-    }
-
     public void Retry()
     {
-        ChangeScene( SceneManager.GetActiveScene().buildIndex );
+        Utils.ChangeScene( SceneManager.GetActiveScene().buildIndex );
     }
 
     public void GoToMainMenu()
     {
         int mainMenuIndexScene = 1;
-        ChangeScene( mainMenuIndexScene );
+        Utils.ChangeScene( mainMenuIndexScene );
     }
 
     public void Lose()

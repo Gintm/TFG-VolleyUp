@@ -13,7 +13,9 @@ public class PlayerDataController : MonoBehaviour
         var playerData = LoadFromJson.PlayerData();
 
         gameData.UpdateWith(playerData);
-        GetComponent<Header>()?.RefreshLabels(playerData);
+        GetComponent<Header>()?.RefreshLabels( playerData );
+        FindObjectOfType<TeamClassification>()?.LoadTable( playerData );
+        FindObjectOfType<PlayerProfile>()?.LoadProfileInformation( playerData );
     }
 
     public void Save()

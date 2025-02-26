@@ -11,10 +11,11 @@ public class PlayerData
     public int streaks;
     public int currentSession;
     public int lvlCurrentSession;
-    public string firstname;
-    public string surname;
-    public string degree;
-    public Team teams;
+    public string name;
+    public string certification;
+    public string victories;
+    public string loses;
+    public List<Team> teams;
 }
 
 [Serializable]

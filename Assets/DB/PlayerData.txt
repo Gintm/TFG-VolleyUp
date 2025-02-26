@@ -4,12 +4,22 @@
     "streaks": 0,
     "currentSession": 0,
     "lvlCurrentSession": 0,
-    "firstname": "Gemma",
-    "surname": "Torello",
-    "degree": "Entrenador Pista Nivell I",
-    "teams": {
-        "name": "Academia Voleibol Barcelona",
-        "category": "Senior",
-        "league": "4a catalana"
-    }
+    "name": "Gemma Torello",
+    "certification": "Entrenador Pista Nivell I",
+    "victories": 30,
+    "loses": 19,
+    "teams": [
+
+        {
+            "name": "Academia Voleibol Barcelona",
+            "category": "Senior",
+            "league": "4a catalana"
+        },
+        {
+            "name": "FSCastellar",
+            "category": "Juvenil",
+            "league": "2a catalana"
+        }
+
+    ]
 }

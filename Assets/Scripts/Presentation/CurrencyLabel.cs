@@ -7,9 +7,9 @@ namespace Presentation
     {
         [SerializeField] string labelId;
 
-        public bool IsOf(string currency) => labelId == currency;
+        public bool IsOf( string currency ) => labelId == currency;
 
-        public void Refresh(int value)
+        public void Refresh( int value )
             => GetComponentInChildren<TMP_Text>().text = value.ToString();
     }
 }
