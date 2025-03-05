@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Questions
+public class Level
 {
+    public int levelNumber;
     public List<Question> questions;
 
     public int HowMany => questions.Count;

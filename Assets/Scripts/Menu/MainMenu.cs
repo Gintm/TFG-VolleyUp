@@ -15,7 +15,9 @@ public class MainMenu : MonoBehaviour
     {
         if( playerDataController.HasNoLifes() )
             return;
-        
+
+        CarouselManager carousel = FindObjectOfType<CarouselManager>();
+        PlayerInGameStats.SaveSession( carousel.CurrentSession() );
         ChangeScene( scene );
     }
 }

@@ -9,7 +9,6 @@ using static Codice.CM.Common.CmCallContext;
 public class CarouselManager : MonoBehaviour
 {
     [SerializeField] private PlayerDataScriptableObject gameData;
-    public event EventHandler OnCurrentSessionLoaded;
 
     [Header( "Content Vieport" )]
     public Image contentDisplay;
@@ -87,7 +86,6 @@ public class CarouselManager : MonoBehaviour
     void Update()
     {
         DetectSwipe();
-        //TODO: WHEN NOTIFIED
         int gameDataCurrentSession = gameData.GetCurrentSession();
         if ( gameDataCurrentSession != currentSession )
         {
@@ -180,5 +178,10 @@ public class CarouselManager : MonoBehaviour
                 dotImage.fillAmount = 0f;
             }
         }
+    }
+
+    public int CurrentSession()
+    {
+        return currentIndex;
     }
 }

@@ -5,10 +5,10 @@ namespace DefaultNamespace
 {
     public class Round
     {
-        readonly Questions questions;
+        readonly Level questions;
         TimeSpan duration;
         
-        public Round(Questions questionsOfTheCurrentRound)
+        public Round(Level questionsOfTheCurrentRound)
         {
             TotalQuestions = questionsOfTheCurrentRound.HowMany;
             questions = questionsOfTheCurrentRound;

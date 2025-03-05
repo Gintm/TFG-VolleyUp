@@ -1,15 +1,14 @@
 {
-    "lifes": 3,
+    "lifes": 0,
     "coins": 1000,
     "streaks": 0,
     "currentSession": 0,
     "lvlCurrentSession": 0,
     "name": "Gemma Torello",
     "certification": "Entrenador Pista Nivell I",
-    "victories": 30,
-    "loses": 19,
+    "victories": "30",
+    "loses": "19",
     "teams": [
-
         {
             "name": "Academia Voleibol Barcelona",
             "category": "Senior",
@@ -20,6 +19,5 @@
             "category": "Juvenil",
             "league": "2a catalana"
         }
-
     ]
 }

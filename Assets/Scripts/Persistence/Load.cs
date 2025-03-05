@@ -14,10 +14,11 @@ namespace Persistence
             return JsonUtility.FromJson<PlayerData>( jsonData );
         }
 
-        public static Round OneRound(string textToLoad)
+        public static Round OneRound(string textToLoad, int sessionToLoad, int levelToLoad)
         {
-            var data = JsonUtility.FromJson<Questions>( textToLoad );
-            return new Round( data );
+            var data = JsonUtility.FromJson<QuestionModel>( textToLoad );
+            Level currentLevel = data.sessions[sessionToLoad].levels[levelToLoad];
+            return new Round( currentLevel );
         }
     }
 }

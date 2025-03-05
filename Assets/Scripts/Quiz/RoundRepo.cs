@@ -9,7 +9,7 @@ public interface RoundRepo
 {
     public void LoadData( TextAsset file );
     public void LoadData( string path );
-    public abstract Round OneRound();
+    public abstract Round OneRound(int session, int level);
 }
 
 public class OneQuestionOneAnswerRepo : MonoBehaviour, RoundRepo
@@ -23,9 +23,9 @@ public class OneQuestionOneAnswerRepo : MonoBehaviour, RoundRepo
 
     public void LoadData( string path ) { }
 
-    public Round OneRound()
+    public Round OneRound(int session, int level)
     {
-        return LoadFromJson.OneRound( JSONFile.text );
+        return LoadFromJson.OneRound( JSONFile.text, session, level );
     }
 }
 
@@ -40,17 +40,9 @@ public class QaRoundRepo : MonoBehaviour, RoundRepo
         JSONpath = path;
     }
 
-    public Round OneRound()
+    public Round OneRound( int session, int level )
     {
         var jsonData = File.ReadAllText( JSONpath );
-        return LoadFromJson.OneRound( jsonData );
+        return LoadFromJson.OneRound( jsonData, session, level );
     }
 }
-
-//public class TheNewIncredibleRoundRepo : RoundRepo
-//{
-//    public Round OneRound()
-//    {
-//        throw new NotImplementedException();
-//    }
-//}

@@ -1,0 +1,211 @@
+{
+    "sessions": [
+        {
+            "sessionNumber": 1,
+            "levels": [
+                {
+                    "levelNumber": 1,
+                    "questions": [
+                        {
+                            "title": "Quin o quins són els objectius de la PF dins l'entrenament del voleibol?",
+                            "answers":
+                            [
+                                "Millora de la condició física",
+                                "Prevenció de lesions",
+                                "Escalfament previ a l'entrenament",
+                                "Treball de la coordinació i agilitat",
+                                "Totes les anteriors"
+                            ],
+                            "correctAnswer": 5
+                        },
+                        {
+                            "title": "En què consisteix la millora de la condició física?",
+                            "answers":
+                            [
+                                "Força orientada a la potència",
+                                "Resistència Anaeròbica",
+                                "Velocitat",
+                                "Agilitat",
+                                "Totes les anteriors"
+                            ],
+                            "correctAnswer": 5
+                        },
+                        {
+                            "title": "Es fa la mateixa PF en iniciació esportiva?",
+                            "answers":
+                            [
+                                "Es tenen objectius diferents",
+                                "No és necessària la PF",
+                                "Es pot fer en horari d'entrenament",
+                                "Ha de ser específic pel voleibol",
+                                "S'ha de treballar potència"
+                            ],
+                            "correctAnswer": 1
+                        },
+                        {
+                            "title": "De quines eines disposo si no es tenen mitjans?",
+                            "answers":
+                            [
+                                "Bancs, xarxa, pista de voleibol i pilotes",
+                                "Pista de voleibol, xarxa i pilotes",
+                                "Cons, carrer, pista de voleibol i pilotes",
+                                "Pilotes",
+                                "Pista de voleibol i pilotes variades"
+                            ],
+                            "correctAnswer": 2
+                        },
+                        {
+                            "title": "Quin és l'objectiu més important de l'escalfament?",
+                            "answers":
+                            [
+                                "Millorar la concentració",
+                                "Aconseguir el màxim rendiment de l'esportista",
+                                "Prevenir lesions",
+                                "Entrar en calor",
+                                "Millorar la motivació"
+                            ],
+                            "correctAnswer": 3
+                        },
+                        {
+                            "title": "Què hem de tenir en compte en un escalfament pre-competició?",
+                            "answers":
+                            [
+                                "Ha de ser obligatòriament diferent de l'entrenament",
+                                "Controlar el temps de cada activitat",
+                                "Preparar el partit",
+                                "Adaptació a la pista de joc",
+                                "Totes les anteriors"
+                            ],
+                            "correctAnswer": 2
+                        },
+                        {
+                            "title": "Per què són la majoria de lesions al voleibol?",
+                            "answers":
+                            [
+                                "Per desgast",
+                                "Per no fer estiraments al finalitzar",
+                                "Per no tenir una bona condició física",
+                                "Per accions traumàtiques",
+                                "Per no fer treball preventiu"
+                            ],
+                            "correctAnswer": 1
+                        },
+                        {
+                            "title": "On hi ha evidència científica en la millora de resistència i capacitats a la vegada que millora en força i potència?",
+                            "answers":
+                            [
+                                "Circuits HIIT",
+                                "Circuits '7 minutes workout'",
+                                "Treballs de control de pilota a pista",
+                                "Tasques de força i prevenció",
+                                "Circuits al gimnàs"
+                            ],
+                            "correctAnswer": 2
+                        }
+                    ]
+                },
+                {
+                    "levelNumber": 2,
+                    "questions": [
+                        {
+                            "title": "Quin o quins són els objectius de la PF dins l'entrenament del voleibol?",
+                            "answers":
+                            [
+                                "Millora de la condició física",
+                                "Prevenció de lesions",
+                                "Escalfament previ a l'entrenament",
+                                "Treball de la coordinació i agilitat",
+                                "Totes les anteriors"
+                            ],
+                            "correctAnswer": 5
+                        },
+                        {
+                            "title": "En què consisteix la millora de la condició física?",
+                            "answers":
+                            [
+                                "Força orientada a la potència",
+                                "Resistència Anaeròbica",
+                                "Velocitat",
+                                "Agilitat",
+                                "Totes les anteriors"
+                            ],
+                            "correctAnswer": 5
+                        },
+                        {
+                            "title": "Es fa la mateixa PF en iniciació esportiva?",
+                            "answers":
+                            [
+                                "Es tenen objectius diferents",
+                                "No és necessària la PF",
+                                "Es pot fer en horari d'entrenament",
+                                "Ha de ser específic pel voleibol",
+                                "S'ha de treballar potència"
+                            ],
+                            "correctAnswer": 1
+                        },
+                        {
+                            "title": "De quines eines disposo si no es tenen mitjans?",
+                            "answers":
+                            [
+                                "Bancs, xarxa, pista de voleibol i pilotes",
+                                "Pista de voleibol, xarxa i pilotes",
+                                "Cons, carrer, pista de voleibol i pilotes",
+                                "Pilotes",
+                                "Pista de voleibol i pilotes variades"
+                            ],
+                            "correctAnswer": 2
+                        },
+                        {
+                            "title": "Quin és l'objectiu més important de l'escalfament?",
+                            "answers":
+                            [
+                                "Millorar la concentració",
+                                "Aconseguir el màxim rendiment de l'esportista",
+                                "Prevenir lesions",
+                                "Entrar en calor",
+                                "Millorar la motivació"
+                            ],
+                            "correctAnswer": 3
+                        },
+                        {
+                            "title": "Què hem de tenir en compte en un escalfament pre-competició?",
+                            "answers":
+                            [
+                                "Ha de ser obligatòriament diferent de l'entrenament",
+                                "Controlar el temps de cada activitat",
+                                "Preparar el partit",
+                                "Adaptació a la pista de joc",
+                                "Totes les anteriors"
+                            ],
+                            "correctAnswer": 2
+                        },
+                        {
+                            "title": "Per què són la majoria de lesions al voleibol?",
+                            "answers":
+                            [
+                                "Per desgast",
+                                "Per no fer estiraments al finalitzar",
+                                "Per no tenir una bona condició física",
+                                "Per accions traumàtiques",
+                                "Per no fer treball preventiu"
+                            ],
+                            "correctAnswer": 1
+                        },
+                        {
+                            "title": "On hi ha evidència científica en la millora de resistència i capacitats a la vegada que millora en força i potència?",
+                            "answers":
+                            [
+                                "Circuits HIIT",
+                                "Circuits '7 minutes workout'",
+                                "Treballs de control de pilota a pista",
+                                "Tasques de força i prevenció",
+                                "Circuits al gimnàs"
+                            ],
+                            "correctAnswer": 2
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

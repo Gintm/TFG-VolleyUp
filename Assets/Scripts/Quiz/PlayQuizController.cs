@@ -48,7 +48,9 @@ public class PlayQuizController : MonoBehaviour
 
     private void setUpData()
     {
-        round = roundRepo.OneRound();
+        int session = PlayerPrefs.GetInt( "Session", 0 );
+        int level = PlayerPrefs.GetInt( "Level", 0 );
+        round = roundRepo.OneRound(session, level);
         quizOrGameOverPanels = new ToggleGameObjects( GameObject.Find( "QuizUI" ), GameObject.Find( "GameOverPanel" ) );
         gameOver = GetComponent<GameOver>();
     }
