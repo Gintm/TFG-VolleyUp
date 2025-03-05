@@ -5,6 +5,7 @@ namespace DefaultNamespace
     public struct Fraction
     {
         public int Numerator { get; }
+        
         public int Denominator { get; }
 
         public float Quotient => (float)Numerator / Denominator;

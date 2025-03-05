@@ -936,6 +936,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2997049260333642998, guid: d5f9e1f7c4d74814893d444201b2b47d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3041292709065459777, guid: d5f9e1f7c4d74814893d444201b2b47d, type: 3}
       propertyPath: manager
       value: 
@@ -1032,6 +1036,10 @@ PrefabInstance:
       propertyPath: manager
       value: 
       objectReference: {fileID: 811978531}
+    - target: {fileID: 7863728444878396422, guid: d5f9e1f7c4d74814893d444201b2b47d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

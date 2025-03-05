@@ -1,6 +1,7 @@
 using System;
 using DefaultNamespace;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayQuizController : MonoBehaviour
 {
@@ -72,5 +73,6 @@ public class PlayQuizController : MonoBehaviour
     {
         var question = round.PickNextQuestion();
         FindObjectOfType<QuestionView>().SetupData(question);
+        FindObjectOfType<ProgressBar>().UpdateProgressBar( round.AnsweredQuestions.OutOf(round.TotalQuestions ) );
     }
 }

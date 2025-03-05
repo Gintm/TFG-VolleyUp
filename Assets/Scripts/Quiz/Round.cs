@@ -22,6 +22,7 @@ namespace DefaultNamespace
         public int Coins { get; private set; }
 
         public int RemainingQuestions => questions.HowMany;
+        public int AnsweredQuestions => TotalQuestions - RemainingQuestions;
         public bool HasEnded => RemainingQuestions == 0;
 
         public bool HasLost => Hits < TotalQuestions;
