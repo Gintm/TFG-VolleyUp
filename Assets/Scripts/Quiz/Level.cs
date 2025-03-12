@@ -4,7 +4,6 @@ using UnityEngine;
 [System.Serializable]
 public class Level
 {
-    public int levelNumber;
     public List<Question> questions;
 
     public int HowMany => questions.Count;
