@@ -27,14 +27,17 @@ public class CarouselManager : MonoBehaviour
     public float swipeThreshold = 50f;
     private Vector2 touchStartPos;
 
-    private int currentSession = 0;
+    private int currentSession, currentLevel = 0;
 
     public RectTransform contentArea;
 
     void Start()
     {
         currentSession = gameData.GetCurrentSession();
-        currentIndex = currentSession;
+        currentLevel = gameData.GetCurrentLevel();
+        currentIndex = currentLevel == 2 ? currentSession+1 : currentSession;
+
+        DisabledUnlockedButtons();
 
         CreateOneDotPerPanel();
 
@@ -44,6 +47,33 @@ public class CarouselManager : MonoBehaviour
         {
             timer = autoMoveTime;
             InvokeRepeating( "AutoMoveContent", 1f, 1f );
+        }
+    }
+
+    void DisabledUnlockedButtons()
+    {
+        bool disable = false;
+
+        for( int panel_index = 0; panel_index < contentPanels.Count; panel_index++ )
+        {
+            Transform panel = contentPanels[panel_index].transform;
+            for( int button_index = 0; button_index < panel.childCount-1; button_index++ )
+            {
+                Button button = panel.GetChild(button_index).GetComponent<Button>();
+                if( button != null )
+                {
+                    if( disable )
+                    {
+                        button.interactable = false;
+                    }
+
+                    bool isNextButton = panel_index == currentSession && button_index == currentLevel + 1;
+                    if( isNextButton || panel_index > currentSession )
+                    {
+                        disable = true;
+                    }
+                }
+            }
         }
     }
 

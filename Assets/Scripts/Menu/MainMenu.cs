@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     PlayerDataController playerDataController;
-    int currentSession = 0;
 
     void Start()
         => playerDataController = GameObject.FindGameObjectWithTag( "Header" ).GetComponent<PlayerDataController>();

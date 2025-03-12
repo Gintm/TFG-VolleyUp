@@ -33,6 +33,8 @@ public class PlayerDataScriptableObject : ScriptableObject, PlayerRepo
 
     public int GetCurrentSession() => currentSession;
 
+    public int GetCurrentLevel() => lvlCurrentSession;
+
     public void UpdateWith(PlayerData infoSource)
     {
         lifes = infoSource.lifes;
