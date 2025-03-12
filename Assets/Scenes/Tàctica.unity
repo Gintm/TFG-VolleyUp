@@ -395,6 +395,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 62971580}
     m_Modifications:
+    - target: {fileID: 443719725099692296, guid: cfe9a990c3025ab40b6a4e796b70ba79, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1848436548}
+    - target: {fileID: 2886521471856709863, guid: cfe9a990c3025ab40b6a4e796b70ba79, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1848436548}
     - target: {fileID: 2931699728087231427, guid: cfe9a990c3025ab40b6a4e796b70ba79, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -479,6 +487,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3272237053672286675, guid: cfe9a990c3025ab40b6a4e796b70ba79, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1848436548}
+    - target: {fileID: 4407932710309515887, guid: cfe9a990c3025ab40b6a4e796b70ba79, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1848436548}
+    - target: {fileID: 5968119911594422731, guid: cfe9a990c3025ab40b6a4e796b70ba79, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1848436548}
     - target: {fileID: 6712241594975561703, guid: cfe9a990c3025ab40b6a4e796b70ba79, type: 3}
       propertyPath: Buttons.Array.size
       value: 6
@@ -507,6 +527,10 @@ PrefabInstance:
       propertyPath: Buttons.Array.data[5]
       value: 
       objectReference: {fileID: 1177422587}
+    - target: {fileID: 6985773397724347188, guid: cfe9a990c3025ab40b6a4e796b70ba79, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1848436548}
     - target: {fileID: 7014563434720621696, guid: cfe9a990c3025ab40b6a4e796b70ba79, type: 3}
       propertyPath: m_Name
       value: CourtQuiz
