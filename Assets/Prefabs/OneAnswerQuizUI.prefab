@@ -1933,7 +1933,7 @@ GameObject:
   - component: {fileID: 588693659995027126}
   - component: {fileID: 6712241594975561703}
   m_Layer: 5
-  m_Name: QuizUI
+  m_Name: OneAnswerQuizUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

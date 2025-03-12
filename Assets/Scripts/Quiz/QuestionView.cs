@@ -13,7 +13,14 @@ public class QuestionView : MonoBehaviour
         for ( int i = 0; i < Buttons.Length; i++ )
         {
             Buttons[i].GetComponent<AnswerScript>().isCorrect = false;
-            Buttons[i].transform.GetChild( 0 ).GetComponent<TMP_Text>().text = model.answers[i];
+
+            Transform child = Buttons[i].transform.GetChild( 0 );
+            TMP_Text textComponent = child.GetComponent<TMP_Text>();
+
+            if ( textComponent != null )
+            {
+                child.GetComponent<TMP_Text>().text = model.answers[i];
+            }
 
             if( model.correctAnswer == i + 1 )
             {
