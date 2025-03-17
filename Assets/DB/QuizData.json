@@ -309,7 +309,20 @@
                 {
                     "questions": [
                         {
-                            "title": "A on està l'oposada en R1?'",
+                            "title": "A on està l'oposada en R1?",
+                            "answers":
+                            [
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            "correctAnswer": 6
+                        },
+                        {
+                            "title": "Quina jugadora farà el servei quan es perdi el punt?",
                             "answers":
                             [
                                 "",
@@ -322,7 +335,46 @@
                             "correctAnswer": 4
                         },
                         {
-                            "title": "A on està l'oposada en R1?'",
+                            "title": "Si hi ha una pilota free, la jugadora de quina posició hauria d'anar?",
+                            "answers":
+                            [
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            "correctAnswer": 3
+                        },
+                        {
+                            "title": "On rebrà la punta davantera si s'està en R1?",
+                            "answers":
+                            [
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            "correctAnswer": 1
+                        },
+                        {
+                            "title": "On està rebent la lliure si s'està en R5?",
+                            "answers":
+                            [
+                                "",
+                                "",
+                                "",
+                                "",
+                                "",
+                                ""
+                            ],
+                            "correctAnswer": 1
+                        },
+                        {
+                            "title": "On està esperant la col·locadora si s'està rebent en R6?",
                             "answers":
                             [
                                 "",
@@ -335,7 +387,7 @@
                             "correctAnswer": 4
                         },
                         {
-                            "title": "A on està l'oposada en R1?'",
+                            "title": "On rep la punta del darrere en R1?",
                             "answers":
                             [
                                 "",
@@ -345,10 +397,10 @@
                                 "",
                                 ""
                             ],
-                            "correctAnswer": 4
+                            "correctAnswer": 3
                         },
                         {
-                            "title": "A on està l'oposada en R1?'",
+                            "title": "On rep la punta davantera en R2?",
                             "answers":
                             [
                                 "",
@@ -358,59 +410,7 @@
                                 "",
                                 ""
                             ],
-                            "correctAnswer": 4
-                        },
-                        {
-                            "title": "A on està l'oposada en R1?'",
-                            "answers":
-                            [
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                ""
-                            ],
-                            "correctAnswer": 4
-                        },
-                        {
-                            "title": "A on està l'oposada en R1?'",
-                            "answers":
-                            [
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                ""
-                            ],
-                            "correctAnswer": 4
-                        },
-                        {
-                            "title": "A on està l'oposada en R1?'",
-                            "answers":
-                            [
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                ""
-                            ],
-                            "correctAnswer": 4
-                        },
-                        {
-                            "title": "A on està l'oposada en R1?'",
-                            "answers":
-                            [
-                                "",
-                                "",
-                                "",
-                                "",
-                                "",
-                                ""
-                            ],
-                            "correctAnswer": 4
+                            "correctAnswer": 3
                         }
                     ]
                 },

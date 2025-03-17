@@ -1,7 +1,7 @@
 {
-    "lifes": 99,
-    "coins": 1000,
-    "streaks": 0,
+    "lifes": 97,
+    "coins": 1080,
+    "streaks": 1,
     "currentSession": 1,
     "lvlCurrentSession": 0,
     "name": "Gemma Torello",

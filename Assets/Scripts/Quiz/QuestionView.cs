@@ -14,11 +14,9 @@ public class QuestionView : MonoBehaviour
         {
             Buttons[i].GetComponent<AnswerScript>().isCorrect = false;
 
-            Transform child = Buttons[i].transform.GetChild( 0 );
-            TMP_Text textComponent = child.GetComponent<TMP_Text>();
-
-            if ( textComponent != null )
+            if( Buttons[i].transform.childCount > 0 )
             {
+                Transform child = Buttons[i].transform.GetChild( 0 );
                 child.GetComponent<TMP_Text>().text = model.answers[i];
             }
 
