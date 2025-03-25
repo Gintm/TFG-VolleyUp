@@ -7,6 +7,7 @@ namespace Persistence
     internal static class LoadFromJson
     {
         const string Path = "Assets//DB//PlayerData.txt";
+        const string ExercisesPath = "Assets/DB/ExercisesData.json";
     
         public static PlayerData PlayerData()
         {
@@ -19,6 +20,13 @@ namespace Persistence
             var data = JsonUtility.FromJson<QuestionModel>( textToLoad );
             Level currentLevel = data.sessions[sessionToLoad].levels[levelToLoad];
             return new Round( currentLevel );
+        }
+
+        public static ExerciseModel ExercisesData()
+        {
+            var jsonData = File.ReadAllText( ExercisesPath );
+            ExerciseModel data = JsonUtility.FromJson<ExerciseModel>( jsonData );
+            return data;
         }
     }
 }
