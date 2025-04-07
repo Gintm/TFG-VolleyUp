@@ -196,6 +196,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 938604301079567284, guid: 1aada6f365a59aa46891348e313f9cae, type: 3}
   m_PrefabInstance: {fileID: 6071764153922625775}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &181355342 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7727884349506861843, guid: 1aada6f365a59aa46891348e313f9cae, type: 3}
+  m_PrefabInstance: {fileID: 6071764153922625775}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573f64bda86fdc94fbe578b3ab27c952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &255956824
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,7 +307,6 @@ GameObject:
   m_Component:
   - component: {fileID: 801625867}
   - component: {fileID: 801625868}
-  - component: {fileID: 801625869}
   m_Layer: 0
   m_Name: PlayerProfileManager
   m_TagString: Untagged
@@ -332,18 +342,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: fb31617202a7ddf4bb7d3e99778276eb, type: 2}
---- !u!114 &801625869
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 801625864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6376426bc119c241bf65d6da8cb71e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &920256862
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,10 +920,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 801625869}
-        m_TargetAssemblyTypeName: Profile, Scripts
+      - m_Target: {fileID: 181355342}
+        m_TargetAssemblyTypeName: Presentation.PlayerProfile, Scripts
         m_MethodName: ChangeScene
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

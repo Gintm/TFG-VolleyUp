@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
 using UnityEngine;
+using Persistence;
 
 namespace Presentation
 {
@@ -18,5 +19,11 @@ namespace Presentation
 
         [NotNull] ProfileLabel LabelOf( string currency )
             => GetComponentsInChildren<ProfileLabel>().Single( x => x.IsOf( currency ) );
+
+        public void ChangeScene()
+        {
+            int mainMenuIndexScene = 1;
+            Utils.ChangeScene( mainMenuIndexScene );
+        }
     }
 }
