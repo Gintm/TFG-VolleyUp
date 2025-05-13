@@ -2,16 +2,13 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 using Presentation;
-using static Codice.CM.Common.CmCallContext;
 
 public class CarouselManager : MonoBehaviour
 {
     [SerializeField] private PlayerDataScriptableObject gameData;
 
-    [Header( "Content Vieport" )]
-    public Image contentDisplay;
+    [Header( "Content Viewport" )]
     public List<GameObject> contentPanels;
 
     [Header( "Navigation Dots" )]
@@ -96,21 +93,6 @@ public class CarouselManager : MonoBehaviour
             var dot = dotsContainer.transform.GetChild( i );
             dot.GetComponentInChildren<NavigationDot>().UpdateColor( i == currentIndex );
         }
-    }
-
-    IEnumerator SmoothFill( Image image, float targetFillAmount, float duration )
-    {
-        float startFillAmount = image.fillAmount;
-        float elapsedTime = 0f;
-
-        while( elapsedTime < duration )
-        {
-            image.fillAmount = Mathf.Lerp( startFillAmount, targetFillAmount, elapsedTime / duration );
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        image.fillAmount = targetFillAmount;
     }
 
     void Update()

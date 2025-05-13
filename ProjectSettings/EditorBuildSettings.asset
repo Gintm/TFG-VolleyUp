@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Home.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 57a50899c601e6a40bdd065f30334a41
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Home.unity
     guid: 8f3b2cf7408c2574dbf9c11865378261
   - enabled: 1
     path: "Assets/Scenes/Miniv\xF2lei.unity"

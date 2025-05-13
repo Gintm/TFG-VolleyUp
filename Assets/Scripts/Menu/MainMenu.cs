@@ -1,22 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    PlayerDataController playerDataController;
+    public void Play() => SceneManager.LoadScene( "Home" );
 
-    void Start()
-        => playerDataController = GameObject.FindGameObjectWithTag( "Header" ).GetComponent<PlayerDataController>();
-
-    public void ChangeScene( string scene ) => SceneManager.LoadScene( scene );
-
-    public void PlayTest( string scene )
-    {
-        if( playerDataController.HasNoLifes() )
-            return;
-
-        CarouselManager carousel = FindObjectOfType<CarouselManager>();
-        PlayerInGameStats.SaveSession( carousel.CurrentSession() );
-        ChangeScene( scene );
-    }
+    public void Exit() => Application.Quit();
 }

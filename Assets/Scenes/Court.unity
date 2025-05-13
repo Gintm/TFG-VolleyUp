@@ -523,6 +523,10 @@ PrefabInstance:
       propertyPath: m_Padding.m_Left
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 8145778757172789863, guid: 036705f4fcbb7af45bfa03a603ad4cc4, type: 3}
+      propertyPath: m_Name
+      value: Manager
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

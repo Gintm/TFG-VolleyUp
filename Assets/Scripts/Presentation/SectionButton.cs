@@ -7,7 +7,6 @@ namespace Presentation
     {
         [SerializeField] string buttonId;
 
-
         public bool IsOf( string section ) => buttonId == section;
 
         public void SetActive( bool shouldBeActive )
