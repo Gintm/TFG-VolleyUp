@@ -14,6 +14,7 @@ public class PlayerDataController : MonoBehaviour
 
         gameData.UpdateWith(playerData);
         GetComponent<Header>()?.RefreshLabels( playerData );
+        FindObjectOfType<Footer>()?.RefreshButtons( playerData );
         FindObjectOfType<TeamClassification>()?.LoadTable( playerData );
         FindObjectOfType<PlayerProfile>()?.LoadProfileInformation( playerData );
     }

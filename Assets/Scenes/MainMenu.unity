@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.9547169, g: 0.75476676, b: 0.75476676, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2059,6 +2059,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8341074285554444771, guid: a5f90fbfc90e52b48b1f36acedd2b909, type: 3}
+      propertyPath: m_Name
+      value: Board
+      objectReference: {fileID: 0}
     - target: {fileID: 8906490103414673165, guid: a5f90fbfc90e52b48b1f36acedd2b909, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2139,11 +2143,77 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9185891863084671839, guid: a5f90fbfc90e52b48b1f36acedd2b909, type: 3}
+      propertyPath: m_Name
+      value: Exercises
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2457462189262882687, guid: a5f90fbfc90e52b48b1f36acedd2b909, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 886540113}
+    - targetCorrespondingSourceObject: {fileID: 9185891863084671839, guid: a5f90fbfc90e52b48b1f36acedd2b909, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 886540112}
+    - targetCorrespondingSourceObject: {fileID: 8341074285554444771, guid: a5f90fbfc90e52b48b1f36acedd2b909, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 886540115}
   m_SourcePrefab: {fileID: 100100000, guid: a5f90fbfc90e52b48b1f36acedd2b909, type: 3}
+--- !u!1 &886540110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9185891863084671839, guid: a5f90fbfc90e52b48b1f36acedd2b909, type: 3}
+  m_PrefabInstance: {fileID: 886540109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &886540111 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2457462189262882687, guid: a5f90fbfc90e52b48b1f36acedd2b909, type: 3}
+  m_PrefabInstance: {fileID: 886540109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &886540112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886540110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c76aaecd9d4c34da86a018d97154de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonId: exercises
+--- !u!114 &886540113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886540111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de51b21ab54d5a43bb5aee8a487e5c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &886540114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8341074285554444771, guid: a5f90fbfc90e52b48b1f36acedd2b909, type: 3}
+  m_PrefabInstance: {fileID: 886540109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &886540115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886540114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c76aaecd9d4c34da86a018d97154de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonId: board
 --- !u!114 &896624830 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2664207794805622508, guid: a6bd80ebe73aed0478d5e75fa8b04256, type: 3}
@@ -3201,7 +3271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2902978202143647272, guid: f13a8a1724a870845a1a430804e32c1a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -445.7443
+      value: -445.74426
       objectReference: {fileID: 0}
     - target: {fileID: 2902978202143647272, guid: f13a8a1724a870845a1a430804e32c1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
