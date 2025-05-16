@@ -16,10 +16,7 @@ public class CarouselManager : MonoBehaviour
     public GameObject dotPrefab;
 
     [Header( "Page Settings" )]
-    public bool useTimer = false;
     public bool isLimitedSwipe = false;
-    public float autoMoveTime = 5f;
-    private float timer;
     public int currentIndex = 0;
     public float swipeThreshold = 50f;
     private Vector2 touchStartPos;
@@ -32,19 +29,13 @@ public class CarouselManager : MonoBehaviour
     {
         currentSession = gameData.GetCurrentSession();
         currentLevel = gameData.GetCurrentLevel();
-        currentIndex = currentLevel == 2 ? currentSession+1 : currentSession;
+        currentIndex = currentLevel == 2 ? currentSession + 1 : currentSession;
 
         DisabledUnlockedButtons();
 
         CreateOneDotPerPanel();
 
         ShowContent();
-
-        if( useTimer )
-        {
-            timer = autoMoveTime;
-            InvokeRepeating( "AutoMoveContent", 1f, 1f );
-        }
     }
 
     void DisabledUnlockedButtons()
@@ -54,9 +45,9 @@ public class CarouselManager : MonoBehaviour
         for( int panel_index = 0; panel_index < contentPanels.Count; panel_index++ )
         {
             Transform panel = contentPanels[panel_index].transform;
-            for( int button_index = 0; button_index < panel.childCount-1; button_index++ )
+            for( int button_index = 0; button_index < panel.childCount - 1; button_index++ )
             {
-                Button button = panel.GetChild(button_index).GetComponent<Button>();
+                Button button = panel.GetChild( button_index ).GetComponent<Button>();
                 if( button != null )
                 {
                     if( disable )
@@ -76,14 +67,14 @@ public class CarouselManager : MonoBehaviour
 
     void CreateOneDotPerPanel()
     {
-        for(var i = 0; i < contentPanels.Count; i++ )
-            CreateDot(i == currentIndex);
+        for( var i = 0; i < contentPanels.Count; i++ )
+            CreateDot( i == currentIndex );
     }
 
     void CreateDot(bool isCurrent)
     {
         var dot = Instantiate( dotPrefab, dotsContainer.transform );
-        dot.GetComponentInChildren<NavigationDot>().UpdateColor( isCurrent);
+        dot.GetComponentInChildren<NavigationDot>().UpdateColor( isCurrent );
     }
 
     void UpdateDots()
@@ -99,7 +90,7 @@ public class CarouselManager : MonoBehaviour
     {
         DetectSwipe();
         int gameDataCurrentSession = gameData.GetCurrentSession();
-        if ( gameDataCurrentSession != currentSession )
+        if( gameDataCurrentSession != currentSession )
         {
             currentSession = gameDataCurrentSession;
             currentIndex = currentSession;
@@ -143,19 +134,6 @@ public class CarouselManager : MonoBehaviour
         return RectTransformUtility.RectangleContainsScreenPoint( contentArea, touchPosition );
     }
 
-    void AutoMoveContent()
-    {
-        timer -= 1f;
-
-        if( timer <= 0 )
-        {
-            timer = autoMoveTime;
-            NextContent();
-        }
-
-        UpdateDots();
-    }
-
     void NextContent()
     {
         currentIndex = ( currentIndex + 1 ) % contentPanels.Count;
@@ -182,7 +160,6 @@ public class CarouselManager : MonoBehaviour
 
             if( isActive )
             {
-                timer = autoMoveTime;
                 dotImage.fillAmount = 1f;
             }
             else
