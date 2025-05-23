@@ -7,7 +7,7 @@ namespace Persistence
 {
     internal static class SaveToJson
     {
-        const string Path = "Assets//DB//PlayerData.txt";
+        const string Path = "Assets/DB/PlayerData.json";
         const string ExercisesPath = "Assets/DB/ExercisesData.json";
 
         public static void PlayerData( ScriptableObject gameData )

@@ -170,7 +170,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 1, g: 0.86274517, b: 0.5411765, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -368,10 +368,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2c0e9fb8653994caf9aea0fbe15ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskInputField: {fileID: 133515468}
+  exerciseInputField: {fileID: 133515468}
   addButton: {fileID: 579680618}
-  taskListContainer: {fileID: 1156103410}
-  taskPrefab: {fileID: 5955843616193174531, guid: fa3b0e56c1d7bc34b892cbfcd4f57be3, type: 3}
+  exerciseListContainer: {fileID: 1156103410}
+  exercisePrefab: {fileID: 5955843616193174531, guid: fa3b0e56c1d7bc34b892cbfcd4f57be3, type: 3}
 --- !u!4 &709057923
 Transform:
   m_ObjectHideFlags: 0
@@ -468,6 +468,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 697314978}
     m_Modifications:
+    - target: {fileID: 767608626422839456, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1770863979121730919, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
       propertyPath: m_Name
       value: ExercisesPanel
@@ -482,11 +486,11 @@ PrefabInstance:
       objectReference: {fileID: 709057922}
     - target: {fileID: 1875835049205889357, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToMainMenu
+      value: GoToHome
       objectReference: {fileID: 0}
     - target: {fileID: 1875835049205889357, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: TaskManager, Scripts
+      value: ExercisesManager, Scripts
       objectReference: {fileID: 0}
     - target: {fileID: 2378226167609558892, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
       propertyPath: m_Spacing
@@ -571,6 +575,42 @@ PrefabInstance:
     - target: {fileID: 2902978202143647272, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3811296323466562564, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000007391
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721779961153569451, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721779961153569451, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 538738faf52b38941a14b1fb330cabfc, type: 3}
+    - target: {fileID: 5855140593081024833, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000010729
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094516942747056799, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 327.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094516942747056799, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 419.5372
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094516942747056799, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -5.7009
+      objectReference: {fileID: 0}
+    - target: {fileID: 6094516942747056799, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000010252
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143899942192444685, guid: 0f706f16ce876974c9e151c7a1f5d9f1, type: 3}
+      propertyPath: m_text
+      value: Introdueix l'exercici...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

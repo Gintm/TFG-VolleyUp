@@ -12,15 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3facbd916c369f840a984fff31699341, type: 3}
   m_Name: GameData
   m_EditorClassIdentifier: 
-  lifes: 3
-  coins: 1000
+  lifes: 90
+  coins: 1080
   streaks: 0
-  currentSession: 0
+  currentSession: 1
   lvlCurrentSession: 0
-  firstname: Gemma
-  surname: Torello
-  degree: Entrenador Pista Nivell I
+  name: Gemma Torello
+  certification: Entrenador Pista Nivell I
+  victories: 30
+  loses: 19
   teams:
-    name: Academia Voleibol Barcelona
+  - name: Academia Voleibol Barcelona
     category: Senior
     league: 4a catalana
+  - name: FSCastellar
+    category: Juvenil
+    league: 2a catalana

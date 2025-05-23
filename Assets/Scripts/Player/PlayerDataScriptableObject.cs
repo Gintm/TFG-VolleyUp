@@ -11,11 +11,17 @@ public class PlayerDataScriptableObject : ScriptableObject, PlayerRepo
     [SerializeField] private int streaks;
     [SerializeField] private int currentSession;
     [SerializeField] private int lvlCurrentSession;
-    [SerializeField] public string name;
-    [SerializeField] public string certification;
-    [SerializeField] public string victories;
-    [SerializeField] public string loses;
-    [SerializeField] public List<Team> teams;
+    [SerializeField] private string name;
+
+    public PlayerDataScriptableObject( string name )
+    {
+        this.name = name;
+    }
+
+    [SerializeField] private string certification;
+    [SerializeField] private string victories;
+    [SerializeField] private string loses;
+    [SerializeField] private List<Team> teams;
 
     public int GetLifes() => lifes;
 

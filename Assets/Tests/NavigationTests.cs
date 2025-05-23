@@ -11,15 +11,15 @@ namespace Tests
     public class NavigationTests
     {
         [UnityTest]
-        public IEnumerator PlayButton_LoadMainMenuScene()
+        public IEnumerator PlayButton_LoadHomeScene()
         {
-            SceneManager.LoadScene("Home");
+            SceneManager.LoadScene("MainMenu");
             yield return new WaitForSeconds(1);
             
             Object.FindObjectsOfType<Button>().First(b => b.name == "PlayButton").onClick.Invoke();
             yield return null;
             
-            Assert.AreEqual("MainMenu", SceneManager.GetActiveScene().name);
+            Assert.AreEqual("Home", SceneManager.GetActiveScene().name);
         }
     }
 }

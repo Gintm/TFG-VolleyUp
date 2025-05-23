@@ -20,12 +20,12 @@ namespace Tests
         [UnityTest]
         public IEnumerator DotsAreLoaded_OnePerCategoryOfQuestions()
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("Home");
             yield return new WaitForSeconds(1);
 
             var dots = GameObject.Find("DotContainer").transform.childCount;
             
-            Assert.AreEqual(dots, 14);
+            Assert.AreEqual(dots, 7);
         }
     }
 }

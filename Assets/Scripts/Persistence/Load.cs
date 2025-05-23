@@ -6,7 +6,7 @@ namespace Persistence
 {
     internal static class LoadFromJson
     {
-        const string Path = "Assets//DB//PlayerData.txt";
+        const string Path = "Assets/DB/PlayerData.json";
         const string ExercisesPath = "Assets/DB/ExercisesData.json";
     
         public static PlayerData PlayerData()

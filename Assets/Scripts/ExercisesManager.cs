@@ -4,14 +4,14 @@ using UnityEngine.UI;
 using TMPro;
 using Persistence;
 
-public class TaskManager : MonoBehaviour
+public class ExercisesManager : MonoBehaviour
 {
-    public TMP_InputField taskInputField;
+    public TMP_InputField exerciseInputField;
     public Button addButton;
-    public Transform taskListContainer;
-    public GameObject taskPrefab;
+    public Transform exerciseListContainer;
+    public GameObject exercisePrefab;
 
-    private List<string> tasks = new List<string>();
+    private List<string> exercises = new List<string>();
 
     void Start()
     {
@@ -20,37 +20,37 @@ public class TaskManager : MonoBehaviour
         {
             foreach (var exercise in exerciseModel.exercises )
             {
-                taskInputField.text = exercise;
-                AddTask();
+                exerciseInputField.text = exercise;
+                AddExercise();
             }
         }
-        addButton.onClick.AddListener( AddTask );
+        addButton.onClick.AddListener( AddExercise );
     }
 
-    public void AddTask()
+    public void AddExercise()
     {
-        string taskText = taskInputField.text;
-        if( !string.IsNullOrEmpty( taskText ) )
+        string exerciseText = exerciseInputField.text;
+        if( !string.IsNullOrEmpty( exerciseText ) )
         {
-            tasks.Add( taskText );
-            GameObject newTask = Instantiate( taskPrefab );
-            newTask.transform.SetParent( taskListContainer, false );
-            newTask.GetComponentInChildren<TMP_Text>().text = taskText;
-            newTask.GetComponentInChildren<Button>().onClick.AddListener( () => RemoveTask( newTask, taskText ) );
-            taskInputField.text = "";
+            exercises.Add( exerciseText );
+            GameObject newExercise = Instantiate( exercisePrefab );
+            newExercise.transform.SetParent( exerciseListContainer, false );
+            newExercise.GetComponentInChildren<TMP_Text>().text = exerciseText;
+            newExercise.GetComponentInChildren<Button>().onClick.AddListener( () => RemoveExercise( newExercise, exerciseText ) );
+            exerciseInputField.text = "";
         }
     }
 
-    public void RemoveTask( GameObject taskObject, string taskText )
+    public void RemoveExercise( GameObject exerciseObject, string exerciseText )
     {
-        tasks.Remove( taskText );
-        Destroy( taskObject );
+        exercises.Remove( exerciseText );
+        Destroy( exerciseObject );
     }
 
-    public void GoToMainMenu()
+    public void GoToHome()
     {
-        SaveToJson.ExerciseData( tasks );
-        int mainMenuIndexScene = 1;
-        Utils.ChangeScene( mainMenuIndexScene );
+        SaveToJson.ExerciseData( exercises );
+        int homeIndexScene = 1;
+        Utils.ChangeScene( homeIndexScene );
     }
 }

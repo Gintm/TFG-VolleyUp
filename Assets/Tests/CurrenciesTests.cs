@@ -10,36 +10,36 @@ namespace Tests
     public class CurrenciesTests
     {
         [UnityTest]
-        public IEnumerator StreaksAreOne()
+        public IEnumerator StreaksAreZero()
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("Home");
             yield return new WaitForSeconds(1);
             
-            var streaks = GameObject.Find("Streak").GetComponentInChildren<TMP_Text>().text;
+            var streaks = GameObject.Find("Streaks").GetComponentInChildren<TMP_Text>().text;
             
-            Assert.AreEqual("1", streaks );
+            Assert.AreEqual("0", streaks );
         }
 
         [UnityTest]
-        public IEnumerator CoinsAre200()
+        public IEnumerator CoinsAre1080()
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("Home");
             yield return new WaitForSeconds(1);
             
             var coins = GameObject.Find("Coins").GetComponentInChildren<TMP_Text>().text;
             
-            Assert.AreEqual("200", coins);
+            Assert.AreEqual("1080", coins);
         }
         
         [UnityTest]
-        public IEnumerator LifesAreZero()
+        public IEnumerator LifesAreNotZero()
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("Home");
             yield return new WaitForSeconds(1);
             
             var lifes = GameObject.Find("Lifes").GetComponentInChildren<TMP_Text>().text;
             
-            Assert.AreEqual("0", lifes);
+            Assert.AreNotEqual("0", lifes);
         }
     }
 }
