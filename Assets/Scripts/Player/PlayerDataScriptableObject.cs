@@ -35,6 +35,17 @@ public class PlayerDataScriptableObject : ScriptableObject, PlayerRepo
     {
         coins += round.Coins;
         streaks += 1;
+
+        bool IsLastLevelOfSession = lvlCurrentSession == 2;
+
+        if( IsLastLevelOfSession )
+        {
+            currentSession++;
+            lvlCurrentSession = 0;
+        }
+        else
+            lvlCurrentSession++;
+
     }
 
     public int GetCurrentSession() => currentSession;

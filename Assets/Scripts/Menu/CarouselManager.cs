@@ -29,7 +29,7 @@ public class CarouselManager : MonoBehaviour
     {
         currentSession = gameData.GetCurrentSession();
         currentLevel = gameData.GetCurrentLevel();
-        currentIndex = currentLevel == 2 ? currentSession + 1 : currentSession;
+        currentIndex = currentSession;
 
         DisabledUnlockedButtons();
 
