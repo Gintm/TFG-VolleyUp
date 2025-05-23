@@ -1,20 +1,15 @@
-# Volei
+# Projecte Unity3D
 
-TODO: RetryButtonHandler()(?)
+Aquest és un projecte desenvolupat amb **Unity 3D**. Per executar-lo al teu entorn local, segueix els passos següents.
 
+## Requisits
 
-Preguntes:
- - PF lvl2: - Què és el més important a tenir en compte en PF d'alt rendiment? 
-	- I en PF d'iniciació? 
-	- Quina eina és la més important en Iniciació esportiva?
-	- Mitjans low cost
-	- Tipus d'escalfament
-	- Què hi ha d'haver en un escalfament?
-	- Exercicis preventius
-	- Lesions específiques
+- **Unity** versió `2022.3.18f1` (LTS)
+- Git instal·lat
 
-- PF lvl3: última diapositiva
+## Instal·lació
 
+1. Clona aquest repositori:
 
-### TODO:
-- Posar l'aplicació bonica així en general
+   ```bash
+   git clone https://github.com/Gintm/TFG-Volei.git
